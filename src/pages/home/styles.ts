@@ -23,6 +23,10 @@ const ContainerHome = styled.div`
       height: 237px;
     }
   }
+
+  @media (max-width: 420px) {
+    margin-top: 20px;
+  }
 `
 
 const ContentHome = styled.div`
