@@ -29,7 +29,7 @@ export function Header() {
             <a href="">Contato</a>
           </li>
           <li>
-            <a href="https://drive.google.com/u/0/uc?id=1bwpF5xXSrjdGbRCrnu3U6bhgb9FAKald&export=download">
+            <a href="https://drive.google.com/uc?export=download&id=1bwpF5xXSrjdGbRCrnu3U6bhgb9FAKald">
               <button>Download CV</button>
             </a>
           </li>
