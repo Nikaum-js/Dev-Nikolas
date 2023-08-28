@@ -3,12 +3,18 @@ import Logo from '../../assets/logo.svg'
 
 import { useState } from 'react'
 import { Sling as Hamburger } from 'hamburger-react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 import Styles from './styles'
 
 export function Header() {
   const [showMenu, setShowMenu] = useState(false)
+
+  function handleChangePage(page: string) {
+    setShowMenu(false)
+
+    return <Navigate to={page} />
+  }
 
   return (
     <Styles.Header showMenu={showMenu}>
@@ -47,13 +53,19 @@ export function Header() {
         <nav className="responsive-navbar">
           <ul>
             <li>
-              <Link to="/about-me">Sobre mim</Link>
+              <Link to="/about-me" onClick={() => setShowMenu(false)}>
+                Sobre mim
+              </Link>
             </li>
             <li>
-              <Link to="/projects"> Projetos</Link>
+              <Link to="/projects" onClick={() => setShowMenu(false)}>
+                Projetos
+              </Link>
             </li>
             <li>
-              <Link to="/blog"> Blog</Link>
+              <Link to="/blog" onClick={() => setShowMenu(false)}>
+                Blog
+              </Link>
             </li>
             <li>
               <a href={Curriculo} download>
