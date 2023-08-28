@@ -1,34 +1,33 @@
 import Curriculo from '../../assets/curriculo.pdf'
-import { Sling as Hamburger } from 'hamburger-react'
-
 import Logo from '../../assets/logo.svg'
 
-import Styles from './styles'
 import { useState } from 'react'
+import { Sling as Hamburger } from 'hamburger-react'
+import { Link } from 'react-router-dom'
+
+import Styles from './styles'
 
 export function Header() {
   const [showMenu, setShowMenu] = useState(false)
 
-  console.log(showMenu)
-
   return (
     <Styles.Header showMenu={showMenu}>
-      <img src={Logo} alt="" />
+      <Link to="/">
+        <img src={Logo} alt="" />
+      </Link>
 
       <nav>
         <ul>
           <li>
-            <a href="">Sobre mim</a>
+            <Link to="/about-me">Sobre mim</Link>
           </li>
           <li>
-            <a href="">Projetos</a>
+            <Link to="/projects">Projetos</Link>
           </li>
           <li>
-            <a href="">Blog</a>
+            <Link to="/blog">Blog</Link>
           </li>
-          <li>
-            <a href="">Contato</a>
-          </li>
+
           <li>
             <a href={Curriculo} download>
               <button>Download CV</button>
@@ -48,19 +47,16 @@ export function Header() {
         <nav className="responsive-navbar">
           <ul>
             <li>
-              <a href="">Sobre mim</a>
+              <Link to="/about-me">Sobre mim</Link>
             </li>
             <li>
-              <a href=""> Projetos</a>
+              <Link to="/projects"> Projetos</Link>
             </li>
             <li>
-              <a href=""> Blog</a>
+              <Link to="/blog"> Blog</Link>
             </li>
             <li>
-              <a href=""> Contato</a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/u/0/uc?id=1bwpF5xXSrjdGbRCrnu3U6bhgb9FAKald&export=download">
+              <a href={Curriculo} download>
                 <button>Download CV</button>
               </a>
             </li>
