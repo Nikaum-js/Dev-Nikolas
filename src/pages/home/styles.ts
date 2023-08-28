@@ -24,7 +24,7 @@ const ContainerHome = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     margin-top: 20px;
   }
 `
