@@ -1,3 +1,4 @@
+import Curriculo from '../../assets/curriculo.pdf'
 import { Sling as Hamburger } from 'hamburger-react'
 
 import Logo from '../../assets/logo.svg'
@@ -29,7 +30,7 @@ export function Header() {
             <a href="">Contato</a>
           </li>
           <li>
-            <a href="https://drive.google.com/uc?export=download&id=1bwpF5xXSrjdGbRCrnu3U6bhgb9FAKald">
+            <a href={Curriculo} download>
               <button>Download CV</button>
             </a>
           </li>
