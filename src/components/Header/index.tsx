@@ -10,12 +10,6 @@ import Styles from './styles'
 export function Header() {
   const [showMenu, setShowMenu] = useState(false)
 
-  function handleChangePage(page: string) {
-    setShowMenu(false)
-
-    return <Navigate to={page} />
-  }
-
   return (
     <Styles.Header showMenu={showMenu}>
       <Link to="/">
