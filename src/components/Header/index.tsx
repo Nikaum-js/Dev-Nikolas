@@ -3,7 +3,7 @@ import Logo from '../../assets/logo.svg'
 
 import { useState } from 'react'
 import { Sling as Hamburger } from 'hamburger-react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Styles from './styles'
 
